@@ -2,6 +2,9 @@
   "name": "Next.js and PostgreSQL",
   "dockerFile": "Dockerfile",
   "appPort": [3000],
+  "mounts": [
+    "source=pg_data,target=/var/lib/postgresql/data,type=volume"
+  ],
   "postCreateCommand": "npm install && npm run dev",
   "customizations": {
     "vscode": {
